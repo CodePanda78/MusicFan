@@ -1,0 +1,51 @@
+body { 
+    background-color: #ffeecb;
+    display: grid;
+    place-content: center;    
+}
+
+.login-container {
+   text-align: center;
+   color: white;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 25px;
+
+}
+
+h1 {
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 30px;
+}
+
+form {
+   margin: auto;
+width: 350px;
+height: 430px;
+background-color: rgb(247, 185, 72);
+padding: 2px;
+border-radius: 10px;
+}
+
+p {
+    text-align: center;
+    color: rgb(255, 152, 16);
+    font-family: monospace;
+    font-size: 20px;
+ }
+
+ a { color: rgb(255, 152, 16);}
+
+.my-btn {
+   background-color: orange;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 25px;
+   color: white; 
+   border: none; 
+   padding: 10px 20px;
+  cursor: pointer;
+text-align: center;
+}
+
+.btn-container {text-align: center;}
+
+.my-btn:hover { background-color: rgb(255, 200, 127); }
