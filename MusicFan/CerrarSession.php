@@ -3,6 +3,6 @@ session_start();
 
 session_unset();
 
-header("Location: IniciarSesion.html");
+header("Location: Menú Principal.php");
 exit;
 ?>

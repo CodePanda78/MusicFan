@@ -20,7 +20,7 @@ if ($_SESSION["token"] == "SI") {
     <button class='dropdown-btn'>User</button>
     <div class='dropdown-content'>
         <a href='Demosession.php'>Yo</a>
-        <a href='Bibioteca.html'>Biblioteca</a>
+        <a href='Biblioteca.php'>Biblioteca</a>
         <a href='CerrarSession.php'>Cerrar sesion</a>
     </div>
 </div>
@@ -44,7 +44,8 @@ if ($_SESSION["token"] == "SI") {
 <!--Content-->
 </div>";
 } else {
-    echo "<head>
+    echo "<script>alert('Estás entrando como invitado');</script>
+    <head>
     <meta charset='UTF-8'>
     <link rel='stylesheet' href='Menu.css'>
 </head>
@@ -53,7 +54,8 @@ if ($_SESSION["token"] == "SI") {
     <button class='dropdown-btn'>User</button>
     <div class='dropdown-content'>
         <a href='Demosession.php'>Yo</a>
-        <a href='Bibioteca.html'>Biblioteca</a>
+        <a href='Biblioteca.php'>Biblioteca</a>
+        <a href='IniciarSesion.html'>Iniciar Sesión</a>
         <a href='CerrarSession.php'>Cerrar sesion</a>
     </div>
 </div>

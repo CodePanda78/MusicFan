@@ -9,7 +9,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "basepiratascbtis";
+$dbname = "musicfan";
 $user = $_POST["User"] ?? "";
 $contra = md5($_POST["Password"] ?? "");
 $email = $_POST["Correo"] ?? "";
@@ -31,6 +31,19 @@ if ($conn->query($sql) === TRUE) {
     echo "<br>";
     echo "<form action='IniciarSesion.html' method='post'>
     <input type='submit' value='Volver'>";
+    $tableName = "tabla_" . $user;
+    $createTableSQL = "CREATE TABLE $tableName (
+      ID CHAR(2),
+      Autor VARCHAR(24),
+      Cancion VARCHAR(24),
+      Link VARCHAR(100)
+    )";
+
+    if ($conn->query($createTableSQL) === TRUE) {
+      echo "Tabla creada: $user";
+    } else {
+      echo "Error al crear la tabla: " . $conn->error;
+    }
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

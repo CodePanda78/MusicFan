@@ -10,7 +10,6 @@
 </head>
 <body>
   <center>
-    <h1>Piratas del CBTIS</h1>
 
     <?php
     $servername = "localhost";
@@ -43,6 +42,10 @@
                 <td>".$row['Autor']."</td>
                 <td>".$row['Cancion']."</td>
                 <td><a href='".$row['Link']."' download>". "Download"."</a></td>
+                <td>
+                <form action='Biblioteca.php' method='post'>
+                <input type='submit' value='Favoritos' class='my-btn'>
+                </td>
               </tr>";
       }
       echo "</table>";
@@ -55,7 +58,3 @@
 </body>
 </html>
 
-
-
-</center>
-</html>
