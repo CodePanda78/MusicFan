@@ -32,7 +32,7 @@ if ($_SESSION["token"] == "SI") {
     $insertSQL = "INSERT INTO $tableName (ID, Autor, Cancion, Link) VALUES ('$ID', '$autor', '$cancion', '$link')";
 
     if ($conn->query($insertSQL) === TRUE) {
-        echo "Canción agregada a favoritos exitosamente";
+        echo "<script> alert ('Canción agregada a favoritos')</script>";
     } else {
         echo "Error al agregar la canción a favoritos: " . $conn->error;
     }
