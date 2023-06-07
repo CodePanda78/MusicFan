@@ -35,6 +35,7 @@
                 <th>Autor</th>
                 <th>Cancion</th>
                 <th>Link</th>
+                <th></th>
               </tr>";
       while ($row = $result->fetch_assoc()) {
         echo "<tr>
@@ -43,8 +44,13 @@
                 <td>".$row['Cancion']."</td>
                 <td><a href='".$row['Link']."' download>". "Download"."</a></td>
                 <td>
-                <form action='Biblioteca.php' method='post'>
-                <input type='submit' value='Favoritos' class='my-btn'>
+                  <form action='AñadirFavoritos.php' method='post'>
+                    <input type='hidden' name='id' value='".$row['ID']."'>
+                    <input type='hidden' name='autor' value='".$row['Autor']."'>
+                    <input type='hidden' name='cancion' value='".$row['Cancion']."'>
+                    <input type='hidden' name='link' value='".$row['Link']."'>
+                    <input type='submit' value='Añadir a favoritos' class='my-btn'>
+                  </form>
                 </td>
               </tr>";
       }
@@ -57,4 +63,5 @@
   </center>
 </body>
 </html>
+
 
