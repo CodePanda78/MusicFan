@@ -24,17 +24,25 @@ if ($_SESSION["token"] == "SI") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Obtener el nombre de la tabla del usuarip actual
+    // Obtener el nombre de la tabla del usuario actual
     $usuario = $_SESSION["usuario"] ?? "";
     $tableName = "tabla_" . $usuario;
 
-    // Insertar canción a favoritos
-    $insertSQL = "INSERT INTO $tableName (ID, Autor, Cancion, Link) VALUES ('$ID', '$autor', '$cancion', '$link')";
+    // Validar si la canción ya está agregada a favoritos
+    $checkSQL = "SELECT ID FROM $tableName WHERE ID='$ID'";
+    $checkResult = $conn->query($checkSQL);
 
-    if ($conn->query($insertSQL) === TRUE) {
-        echo "<script> alert ('Canción agregada a favoritos')</script>";
+    if ($checkResult->num_rows > 0) {
+        echo "<script> alert('La canción ya está añadida a favoritos')</script>";
     } else {
-        echo "Error al agregar la canción a favoritos: " . $conn->error;
+        // Insertar canción a favoritos
+        $insertSQL = "INSERT INTO $tableName (ID, Autor, Cancion, Link) VALUES ('$ID', '$autor', '$cancion', '$link')";
+
+        if ($conn->query($insertSQL) === TRUE) {
+            echo "<script> alert('Canción agregada a favoritos')</script>";
+        } else {
+            echo "Error al agregar la canción a favoritos: " . $conn->error;
+        }
     }
 
     $conn->close();

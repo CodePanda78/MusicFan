@@ -33,7 +33,6 @@ if ($_SESSION["token"] == "SI") {
                     <th>ID</th>
                     <th>Autor</th>
                     <th>Cancion</th>
-                    <th>Link</th>
                     <th></th>
                 </tr>";
         while ($row = $result->fetch_assoc()) {
@@ -41,7 +40,6 @@ if ($_SESSION["token"] == "SI") {
                     <td>".$row['ID']."</td>
                     <td>".$row['Autor']."</td>
                     <td>".$row['Cancion']."</td>
-                    <td><a href='".$row['Link']."' download>". "Download"."</a></td>
                     <td>
                         <form action='BorrarFavoritos.php' method='post'>
                             <input type='hidden' name='cancion_id' value='".$row['ID']."'>

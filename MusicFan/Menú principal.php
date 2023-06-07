@@ -39,6 +39,7 @@ if ($_SESSION["token"] == "SI") {
                 </div>
             </div>
         </nav>
+        <p> Musica2</p>
     </body>
     </html>";
 } else {

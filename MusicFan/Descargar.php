@@ -24,7 +24,7 @@
       die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT ID, Autor, Cancion, Link FROM musica";
+    $sql = "SELECT ID, Portada, Autor, Cancion, Link FROM musica";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -32,6 +32,7 @@
       echo "<table>
               <tr>
                 <th>ID</th>
+                <th>Portada</th>
                 <th>Autor</th>
                 <th>Cancion</th>
                 <th>Link</th>
@@ -40,6 +41,7 @@
       while ($row = $result->fetch_assoc()) {
         echo "<tr>
                 <td>".$row['ID']."</td>
+                <td> <img src= $row[Portada] width='150' height='150'> </td>
                 <td>".$row['Autor']."</td>
                 <td>".$row['Cancion']."</td>
                 <td><a href='".$row['Link']."' download>". "Download"."</a></td>
