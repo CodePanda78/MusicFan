@@ -61,3 +61,7 @@ nav {
     padding: 10px 20px;
     font-size: 25px;
   }
+
+  .dropdown-btn {
+    background-color: rgb(236, 193, 113);
+  }
