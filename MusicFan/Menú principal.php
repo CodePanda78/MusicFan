@@ -16,9 +16,9 @@ if ($_SESSION["token"] == "SI") {
     <body>
         <header>
             <m>M</m>usic <f>F</f>an 
-            <div class='dropdown-container'>
-                <button class='dropdown-btn'>User</button>
-                <div class='dropdown-content'>
+            <div class='desplegable-container'>
+                <button class='desplegable-btn'>User</button>
+                <div class='desplegable-content'>
                     <a href='Demosession.php'>Yo</a>
                     <a href='Biblioteca.php'>Biblioteca</a>
                     <a href='CerrarSession.php'>Cerrar sesión</a>
