@@ -28,6 +28,9 @@ if ($_SESSION["token"] == "SI") {
     $usuario = $_SESSION["usuario"] ?? "";
     $tableName = "tabla_" . $usuario;
 
+    // Escapar caracteres especiales en la ruta de la canción
+    $link = mysqli_real_escape_string($conn, $link);
+
     // Validar si la canción ya está agregada a favoritos
     $checkSQL = "SELECT ID FROM $tableName WHERE ID='$ID'";
     $checkResult = $conn->query($checkSQL);
@@ -49,4 +52,5 @@ if ($_SESSION["token"] == "SI") {
 } else {
     echo "Debes iniciar sesión para agregar a favoritos";
 }
+
 ?>

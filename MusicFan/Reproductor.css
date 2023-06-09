@@ -1,0 +1,86 @@
+/* Estilos generales */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+  }
+  
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos del reproductor */
+  .player {
+    text-align: center;
+  }
+  
+  .player__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .player__btn {
+    cursor: pointer;
+  }
+  
+  .player__btn--small {
+    font-size: 18px;
+  }
+  
+  .player__btn--medium {
+    font-size: 28px;
+  }
+  
+  .player__album {
+    margin-bottom: 20px;
+  }
+  
+  .player__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .player__artist {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .player__song {
+    font-size: 18px;
+    color: #888;
+  }
+  
+  .player__level {
+    width: 100%;
+  }
+  
+  .audio-duration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .player__audio {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .play-btn,
+  .pause-btn {
+    display: inline-block;
+  }
+  
+  .hide {
+    display: none;
+  }
+  

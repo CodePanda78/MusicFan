@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-06-2023 a las 19:11:58
+-- Tiempo de generación: 07-06-2023 a las 18:16:06
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -29,7 +29,6 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `musica` (
   `ID` int(2) NOT NULL,
-  `Portada` varchar(100) NOT NULL,
   `Autor` varchar(24) NOT NULL,
   `Cancion` varchar(24) NOT NULL,
   `Link` varchar(53) NOT NULL
@@ -39,13 +38,13 @@ CREATE TABLE `musica` (
 -- Volcado de datos para la tabla `musica`
 --
 
-INSERT INTO `musica` (`ID`, `Portada`, `Autor`, `Cancion`, `Link`) VALUES
-(1, 'Portada\\PortadaCreep.jpg', 'Radio Head', 'Creep', 'music\\Creep - Radiohead.mp3'),
-(2, 'Portada\\PortadaWeirdFishes.jpg', 'Radio Head', 'Weird Fishes', 'music\\Weird Fishes Arpeggi - Radiohead.mp3'),
-(3, 'Portada\\SpaceJunk.jpg', 'Wang Chung', 'Space Junk', 'music\\Space Junk - Wang Chung.mp3'),
-(4, 'Portada\\DizzyPortada.jpg', 'Joakim Karud', 'Dizzy', 'music\\Dizzy - Joakim Karud (320).mp3'),
-(5, 'Portada\\DreamOnPortada.jpg', 'Aerosmith', 'Dream On', 'music\\Dream On - Aerosmith (320).mp3'),
-(6, 'Portada\\GoShoppingPortada.jpeg', 'Bran Van 3000', 'Go Shopping', 'music\\Go Shopping - Bran Van 3000 (320).mp3');
+INSERT INTO `musica` (`ID`, `Autor`, `Cancion`, `Link`) VALUES
+(1, 'Radio Head', 'Creep', 'music\\Creep - Radiohead.mp3'),
+(2, 'Radio Head', 'Weird Fishes', 'music\\Weird Fishes Arpeggi - Radiohead.mp3'),
+(3, 'Wang Chung', 'Space Junk', 'music\\Space Junk - Wang Chung.mp3'),
+(4, 'Joakim Karud', 'Dizzy', 'music\\Dizzy - Joakim Karud (320).mp3'),
+(5, 'Aerosmith', 'Dream On', 'music\\Dream On - Aerosmith (320).mp3'),
+(6, 'Bran Van 3000', 'Go Shopping', 'music\\Go Shopping - Bran Van 3000 (320).mp3');
 
 -- --------------------------------------------------------
 
@@ -66,7 +65,7 @@ CREATE TABLE `tabla_musicbot` (
 
 INSERT INTO `tabla_musicbot` (`ID`, `Autor`, `Cancion`, `Link`) VALUES
 ('1', 'Radio Head', 'Creep', 'musicCreep - Radiohead.mp3'),
-('5', 'Aerosmith', 'Dream On', 'musicDream On - Aerosmith (320).mp3');
+('1', 'Radio Head', 'Creep', 'musicCreep - Radiohead.mp3');
 
 -- --------------------------------------------------------
 
