@@ -151,3 +151,30 @@ nav {
   margin-right: 20px;
 }
 
+/*Interpol*/
+
+.imagenesIn1, .imagenesIn2 {
+  display: inline-block;
+}
+
+.imagen-modificadaIn2 {
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.imagen-modificadaIn1 {
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.imagenesIn2, .imagenesIn3 {
+  display: inline-block;
+}
+
+.imagen-modificadaIn3 {
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
+}

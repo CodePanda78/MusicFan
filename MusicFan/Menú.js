@@ -71,3 +71,37 @@ function playAudio4() {
 function pauseAudio4() {
   audio4.pause();
 }
+
+//Interpol
+
+var audioIn1 = document.getElementById('myAudioIn1');
+
+function playAudioIn1() {
+  audioIn1.play();
+}
+
+function pauseAudioIn1() {
+  audioIn1.pause();
+}
+
+var audioIn2 = document.getElementById('myAudioIn2');
+
+function playAudioIn2() {
+  audioIn2.play();
+}
+
+function pauseAudioIn2() {
+  audioIn2.pause();
+}
+
+
+var audioIn3 = document.getElementById('myAudioIn3');
+
+function playAudioIn3() {
+  audioIn3.play();
+}
+
+function pauseAudioIn3() {
+  audioIn3.pause();
+}
+
