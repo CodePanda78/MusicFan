@@ -85,12 +85,69 @@ nav {
 }
 
 /*Contents*/
+ /*LO MAS NUEVO*/
+.imagenes, .imagenesD {
+  display: inline-block;
+}
 
 .imagen-modificada {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
 }
 
-.audio {
-background-color: rgb(104, 169, 222);
+.imagen-modificadaD {
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
 }
+ /*G*/
+.imagenesD, .imagenesG {
+  display: inline-block;
+}
+
+.imagen-modificadaG {
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
+}
+
+
+/*S*/
+.imagenesG, .imagenesS {
+  display: inline-block;
+}
+
+.imagen-modificadaS {
+  height: 200px;
+  width: 200px;
+}
+
+/*NIRVANA*/
+
+.imagenes2, .imagenes3 {
+  display: inline-block;
+}
+
+.imagen-modificada2 {
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.imagen-modificada3 {
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.imagenes3, .imagenes4 {
+  display: inline-block;
+}
+
+.imagen-modificada4 {
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
+}
+

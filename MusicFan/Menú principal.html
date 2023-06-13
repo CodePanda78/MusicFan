@@ -34,9 +34,80 @@
 <!--Content-->
 <content>
 <br>
-<div class="imagenes">
-    <img src="Portada\SpaceJunk.jpg" class="imagen-modificada"> <br> <br>
-    
+
+<h2> Lo más Nuevo!</h2>
+
+<div class="container">
+    <div class="imagenes">
+      <img src="Portada\SpaceJunk.jpg" class="imagen-modificada"> <br> <br>
+      <button onclick="playAudio()">Play</button>
+      <button onclick="pauseAudio()">Pause</button>
+      <audio id="myAudio">
+        <source src="music/Space Junk - Wang Chung.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  
+    <div class="imagenesD">
+      <img src="Portada\DizzyPortada.jpg" class="imagen-modificadaD"> <br> <br>
+      <button onclick="playAudioD()">Play</button>
+      <button onclick="pauseAudioD()">Pause</button>
+      <audio id="myAudioD">
+        <source src="music\Dizzy - Joakim Karud (320).mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="imagenesG">
+        <img src="Portada\GoShoppingPortada.jpeg" class="imagen-modificadaG"> <br> <br>
+        <button onclick="playAudioG()">Play</button>
+        <button onclick="pauseAudioG()">Pause</button>
+        <audio id="myAudioG">
+          <source src="music\Go Shopping - Bran Van 3000 (320).mp3" type="audio/mpeg">
+        </audio>
+      </div>
+  </div>
+
+  <div class="imagenesS">
+    <img src="Portada\S3RLPortada.jpeg" class="imagen-modificadaS"> <br> <br>
+    <button onclick="playAudioS()">Play</button>
+    <button onclick="pauseAudioS()">Pause</button>
+    <audio id="myAudioS">
+      <source src="music\Mtc - S3RL.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+  
+    <!--Nirvana-->
+     <h2>Lo mejor de Nirvana!</h2>
+     <div class="imagenes2">
+        <img src="Portada\CAYAPortada.jpeg" class="imagen-modificada2"> <br> <br>
+        <button onclick="playAudio2()">Play</button>
+        <button onclick="pauseAudio2()">Pause</button>
+        <audio id="myAudioS">
+          <source src="music\Come As You Are - Nirvana.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="imagenes3">
+        <img src="Portada\SomethingPortada.jpeg" class="imagen-modificada3"> <br> <br>
+        <button onclick="playAudio3()">Play</button>
+        <button onclick="pauseAudio3()">Pause</button>
+        <audio id="myAudio3">
+          <source src="music\Something In The Way - Nirvana.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="imagenes4">
+        <img src="Portada\NevermindPortada.jpg" class="imagen-modificada4"> <br> <br>
+        <button onclick="playAudio4()">Play</button>
+        <button onclick="pauseAudio4()">Pause</button>
+        <audio id="myAudio4">
+          <source src="music\Drain You - Nirvana.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+         <!--Clásicos-->
+     <h2>Los clásicos!</h2>
+         <script src="Menú.js"></script>
 
 </div>
 </content>
