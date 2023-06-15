@@ -17,7 +17,7 @@ if ($_SESSION["token"] == "SI") {
        <img src = 'Portada\User.png'> <button class='dropdown-btn'>User</button> </img>
         <div class='dropdown-content'>
             <a href='Demosession.php'>Yo</a> <br> <br>
-            <a href='Biblioteca.php'>Biblioteca</a> <br> <br>
+            <a href='Avance Player\Reproductor.php'>Biblioteca</a> <br> <br>
             <a href='CerrarSession.php'>Cerrar sesion</a>
         </div>
     </div>

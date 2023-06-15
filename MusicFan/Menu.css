@@ -6,9 +6,16 @@ header {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.user-icon {
+  position: absolute;
+  top: 150%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+}
 .dropdown-container {
   position: relative;
   float: right;
+  
 }
 
 .dropdown-btn {
@@ -21,6 +28,7 @@ header {
   width: 5px;
   padding: 10px;
   cursor: pointer;
+  
 }
 
 img {
@@ -39,6 +47,7 @@ img {
   padding: 10px;
   right: -0.3px;
   font-size: 20px;
+  top: 300%;
 }
 
 .dropdown-container:hover .dropdown-content {
@@ -177,4 +186,50 @@ nav {
   height: 200px;
   width: 200px;
   margin-right: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.imagenes {
+  text-align: center;
+  margin: 10px;
+}
+
+.imagenes img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.play-pause-btn-container {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.play-btn::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url("Portada/Play.png") no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.pause-btn::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url("Portada/Pause.png") no-repeat;
+  background-size: cover;
+  vertical-align: middle;
 }

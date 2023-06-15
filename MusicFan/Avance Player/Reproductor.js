@@ -59,3 +59,46 @@ window.addEventListener('load', function() {
     return minutes + ':' + seconds;
   }
 });
+
+var songs = " . json_encode($songs) . ";
+var currentSongIndex = $currentSongIndex;
+var audioPlayer = document.getElementById('audio-player');
+
+function playSong(index) {
+    var song = songs[index];
+    audioPlayer.src = song.link;
+    audioPlayer.load();
+    audioPlayer.play();
+    document.querySelector('.player__artist').textContent = song.name;
+    document.querySelector('.player__song').textContent = song.author;
+    document.querySelector('#icon-menu').href = song.link;
+}
+
+document.querySelector('#play-pause-btn').addEventListener('click', function() {
+    if (audioPlayer.paused) {
+        audioPlayer.play();
+        this.classList.remove('play');
+        this.classList.add('pause');
+    } else {
+        audioPlayer.pause();
+        this.classList.remove('pause');
+        this.classList.add('play');
+    }
+});
+
+document.querySelector('#forward-btn').addEventListener('click', function() {
+    currentSongIndex++;
+    if (currentSongIndex >= songs.length) {
+        currentSongIndex = 0;
+    }
+    playSong(currentSongIndex);
+});
+
+document.querySelector('#backward-btn').addEventListener('click', function() {
+    currentSongIndex--;
+    if (currentSongIndex < 0) {
+        currentSongIndex = songs.length - 1;
+    }
+    playSong(currentSongIndex);
+});
+

@@ -78,7 +78,6 @@ if ($_SESSION["token"] == "SI") {
                 </div>
             </div>
         </div>
-        <script src='Reproductor.js'></script>
         <script>
             var songs = " . json_encode($songs) . ";
             var currentSongIndex = $currentSongIndex;

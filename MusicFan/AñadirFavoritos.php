@@ -16,7 +16,6 @@ if ($_SESSION["token"] == "SI") {
     $autor = $_POST["autor"] ?? "";
     $cancion = $_POST["cancion"] ?? "";
     $link = $_POST["link"] ?? "";
-
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connections
