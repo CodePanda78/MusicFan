@@ -1,0 +1,108 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 07-06-2023 a las 18:16:06
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `musicfan`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `musica`
+--
+
+CREATE TABLE `musica` (
+  `ID` int(2) NOT NULL,
+  `Autor` varchar(24) NOT NULL,
+  `Cancion` varchar(24) NOT NULL,
+  `Link` varchar(53) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `musica`
+--
+
+INSERT INTO `musica` (`ID`, `Autor`, `Cancion`, `Link`) VALUES
+(1, 'Radio Head', 'Creep', 'music\\Creep - Radiohead.mp3'),
+(2, 'Radio Head', 'Weird Fishes', 'music\\Weird Fishes Arpeggi - Radiohead.mp3'),
+(3, 'Wang Chung', 'Space Junk', 'music\\Space Junk - Wang Chung.mp3'),
+(4, 'Joakim Karud', 'Dizzy', 'music\\Dizzy - Joakim Karud (320).mp3'),
+(5, 'Aerosmith', 'Dream On', 'music\\Dream On - Aerosmith (320).mp3'),
+(6, 'Bran Van 3000', 'Go Shopping', 'music\\Go Shopping - Bran Van 3000 (320).mp3');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tabla_musicbot`
+--
+
+CREATE TABLE `tabla_musicbot` (
+  `ID` char(2) DEFAULT NULL,
+  `Autor` varchar(24) DEFAULT NULL,
+  `Cancion` varchar(24) DEFAULT NULL,
+  `Link` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `tabla_musicbot`
+--
+
+INSERT INTO `tabla_musicbot` (`ID`, `Autor`, `Cancion`, `Link`) VALUES
+('1', 'Radio Head', 'Creep', 'musicCreep - Radiohead.mp3'),
+('1', 'Radio Head', 'Creep', 'musicCreep - Radiohead.mp3');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuariosmf`
+--
+
+CREATE TABLE `usuariosmf` (
+  `Usuario` varchar(34) NOT NULL,
+  `Contraseña` varchar(32) NOT NULL,
+  `Email` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuariosmf`
+--
+
+INSERT INTO `usuariosmf` (`Usuario`, `Contraseña`, `Email`) VALUES
+('MusicBot', '21232f297a57a5a743894a0e4a801fc3', 'Musicbot@gmail.com');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `musica`
+--
+ALTER TABLE `musica`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indices de la tabla `usuariosmf`
+--
+ALTER TABLE `usuariosmf`
+  ADD PRIMARY KEY (`Usuario`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

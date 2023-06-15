@@ -1,0 +1,29 @@
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="player">
+    <audio id="audio-player">
+      <source src="../music\Space Junk - Wang Chung.mp3" type="audio/mp3">
+    </audio>
+    <div class="controls">
+      <div id="play-pause-btn" class="control-btn">&#9658;</div>
+      <div id="backward-btn" class="control-btn">&#9668;&#9668;</div>
+      <div id="forward-btn" class="control-btn">&#9658;&#9658;</div>
+      <div id="speed-btn" class="control-btn">1x</div>
+      <a id="download-btn" href="../music\Space Junk - Wang Chung.mp3" download>Descargar</a>
+    </div>
+    <div class="timeline">
+      <input type="range" id="progress-bar" min="0" value="0">
+      <div id="timer">0:00 / 0:00</div>
+    </div>
+  </div>
+
+  <script src="node.js"></script>
+</body>
+</html>
+
+
