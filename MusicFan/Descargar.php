@@ -4,46 +4,50 @@
   <title>Piratas del CBTIS</title>
   <style>
     .flashcard {
-      width: 300px;
-      height: 400px;
+      width: 100%;
+      height: 150px;
       margin: 10px;
       padding: 10px;
-      background-color: #f9f9f9;
+      background-color: #e1ecf4;
+      border: 1px solid #b2c7d7;
       border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      display: inline-block;
-      overflow: hidden;
+      display: flex;
     }
 
     .flashcard img {
-      width: 100%;
-      height: 200px;
+      width: 150px;
+      height: 100%;
       object-fit: cover;
       border-radius: 5px;
+      margin-right: 10px;
     }
 
     .flashcard-content {
-      padding: 10px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .flashcard h3 {
       margin: 0;
       font-size: 18px;
       font-weight: bold;
+      color: #2a648d;
     }
 
     .flashcard p {
       margin: 5px 0;
       font-size: 14px;
+      color: #4a7ca8;
     }
 
     .flashcard a {
-      display: block;
+      display: inline-block;
       margin-top: 10px;
-      text-align: center;
       font-weight: bold;
       color: #fff;
-      background-color: #4CAF50;
+      background-color: #4a90e2;
       border: none;
       border-radius: 5px;
       padding: 8px 16px;
@@ -51,7 +55,7 @@
     }
 
     .flashcard a:hover {
-      background-color: #45a049;
+      background-color: #2361a8;
     }
   </style>
 </head>
