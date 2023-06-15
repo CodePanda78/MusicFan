@@ -3,8 +3,18 @@
 <head>
   <title>Piratas del CBTIS</title>
   <style>
-    table, th, td {
+    .flashcard {
       border: 1px solid black;
+      width: 300px;
+      height: 400px;
+      margin: 10px;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    .flashcard img {
+      width: 150px;
+      height: 150px;
     }
   </style>
 </head>
@@ -28,35 +38,21 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-      // Output data of each row
-      echo "<table>
-              <tr>
-                <th>ID</th>
-                <th>Portada</th>
-                <th>Autor</th>
-                <th>Cancion</th>
-                <th>Link</th>
-                <th></th>
-              </tr>";
       while ($row = $result->fetch_assoc()) {
-        echo "<tr>
-                <td>".$row['ID']."</td>
-                <td> <img src= $row[Portada] width='150' height='150'> </td>
-                <td>".$row['Autor']."</td>
-                <td>".$row['Cancion']."</td>
-                <td><a href='".$row['Link']."' download>". "Download"."</a></td>
-                <td>
-                  <form action='AñadirFavoritos.php' method='post'>
-                    <input type='hidden' name='id' value='".$row['ID']."'>
-                    <input type='hidden' name='autor' value='".$row['Autor']."'>
-                    <input type='hidden' name='cancion' value='".$row['Cancion']."'>
-                    <input type='hidden' name='link' value='".$row['Link']."'>
-                    <input type='submit' value='Añadir a favoritos' class='my-btn'>
-                  </form>
-                </td>
-              </tr>";
+        echo "<div class='flashcard'>
+                <img src='".$row['Portada']."' alt='Portada'>
+                <p>Autor: ".$row['Autor']."</p>
+                <p>Cancion: ".$row['Cancion']."</p>
+                <a href='".$row['Link']."' download>Download</a>
+                <form action='AñadirFavoritos.php' method='post'>
+                  <input type='hidden' name='id' value='".$row['ID']."'>
+                  <input type='hidden' name='autor' value='".$row['Autor']."'>
+                  <input type='hidden' name='cancion' value='".$row['Cancion']."'>
+                  <input type='hidden' name='link' value='".$row['Link']."'>
+                  <input type='submit' value='Añadir a favoritos' class='my-btn'>
+                </form>
+              </div>";
       }
-      echo "</table>";
     } else {
       echo "0 results";
     }
@@ -65,5 +61,3 @@
   </center>
 </body>
 </html>
-
-
