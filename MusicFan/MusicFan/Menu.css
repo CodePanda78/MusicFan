@@ -1,0 +1,163 @@
+/*Inicio de página*/
+header {
+  font-size: 45px;
+  text-align: center;
+  background-color: rgb(104, 169, 222);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+html {
+  background-color: rgb(24, 26, 41);
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  color: white;
+
+}
+
+h1 {
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  color: rgb(19, 48, 125);
+  display: inline-block;
+}
+
+.user-icon {
+  position: absolute;
+  top: 150%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+}
+.dropdown-container {
+  position: relative;
+  float: right;
+  
+}
+
+.dropdown-btn {
+  background-color: rgb(104, 169, 222);
+  border: none;
+  color: rgb(104, 169, 222);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5px;
+  height: 20px;
+  width: 5px;
+  padding: 10px;
+  cursor: pointer;
+  
+}
+
+img {
+  height: 40px;
+  padding: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(129, 182, 226);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: white;
+  padding: 10px;
+  right: -0.2px;
+  font-size: 20px;
+  top: 320%;
+}
+
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
+
+/* Aquí empiezan los demás botones */
+nav {
+  background-color: rgb(129, 182, 226);
+}
+
+.Buttons2 {
+  text-align: left;
+}
+
+.my-btn2 {
+  background-color: rgb(129, 182, 226);
+  border: none;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-container2 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: rgb(104, 169, 222);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: white;
+  padding: 10px;
+}
+
+.dropdown-container2:hover .dropdown-content2 {
+  display: block;
+}
+
+/*Contents*/
+ /*LO MAS NUEVO*/
+ .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 200px;
+  background-color: #c3dff5;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+.card img {
+  height: 180px;
+  width: 180px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons .play-btn::before {
+  content: '▶️';
+  font-size: 45px;
+}
+
+.buttons .pause-btn::before {
+  content: '⏸️';
+  font-size: 45px;
+}
