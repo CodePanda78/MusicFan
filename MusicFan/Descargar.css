@@ -1,0 +1,131 @@
+html {
+  background-color:rgb(24, 26, 41);
+}
+/*header*/
+
+header {
+  font-size: 45px;
+  text-align: center;
+  background-color: rgb(104, 169, 222);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: relative;
+}
+
+.dropdown-container {
+  position: relative;
+  float: right;
+  
+}
+
+.dropdown-btn {
+  background-color: rgb(104, 169, 222);
+  border: none;
+  color: rgb(104, 169, 222);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5px;
+  height: 20px;
+  width: 5px;
+  padding: 10px;
+  cursor: pointer;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(129, 182, 226);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: white;
+  padding: 10px;
+  right: -0.2px;
+  font-size: 20px;
+  top: 270%;
+}
+
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
+/*Demás cosas*/
+.flashcard {
+    width: 200px;
+    height: 380px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #c3dff5;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .flashcard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block; /* Para centrar la imagen */
+  }
+
+  .flashcard-content {
+    padding: 10px;
+  }
+
+  .flashcard h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .flashcard p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  .flashcard a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3c91d1;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  .flashcard a:hover {
+    background-color: #274471;
+  }
+
+  .Buttons {
+      display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color:#3c91d1;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .my-btn {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3c91d1;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 34px;
+    text-decoration: none;
+  }
+
+  .my-btn:hover {
+    background-color: #274471;
+  }
