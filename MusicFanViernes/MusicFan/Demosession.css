@@ -1,0 +1,91 @@
+/*Fondos*/
+html {
+    background-color: rgb(198, 227, 253);
+}
+
+img {
+    height: 90px;
+
+}
+
+header {
+    font-size: 45px;
+    text-align: center;
+    background-color: rgb(104, 169, 222);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .email {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    font-weight: bold;
+}
+
+ nav {
+    background-color:  rgb(129, 182, 226);
+  }
+
+  /*Botones*/
+.my-btn2 {
+    background-color: rgb(129, 182, 226);
+    border: none;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .my-btn3 {
+    background-color: rgb(129, 182, 226);
+    border: none;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+/*NUEVO*/
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid rgb(104, 169, 222);
+  overflow: hidden;
+  margin: 10px auto;
+  position: relative;
+}
+
+.profile-image img {
+  width: 100%;
+  height: auto;
+}
+
+.profile-image input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-button {
+  background-color: rgb(104, 169, 222);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
