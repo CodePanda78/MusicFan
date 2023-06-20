@@ -30,15 +30,7 @@ if ($_SESSION["token"] == "SI") {
     <div class='Buttons2'>
         <button class='my-btn2' onclick=\"location.href='Descargar.php'\">Descargas</button>
         <!-- Botón 2 desplegable -->
-        <div class='dropdown-container2'>
-            <button class='my-btn2'>Género</button>
-            <div class='dropdown-content2'>
-                <a href='rock.html'>Rock</a> <br>
-                <a href='Indie.html'>Indie</a> <br>
-                <a href='pop.html'>Undergorund</a> <br>
-                <a href='pop.html'>Latino</a> <br>
-            </div>
-        </div>
+        <button class='my-btn2' onclick=\"location.href='Acerca.php'\">Acerca de nosotros</button>
     </div>
 </nav>
 <!-- Contenido -->
@@ -258,7 +250,6 @@ if ($_SESSION["token"] == "SI") {
         <div class='dropdown-content'>
         <a href='IniciarSesion.html'>Iniciar Sesión</a> <br> <br>
         <a href='Registrar.html'>Registrarse</a> <br> <br>
-            <a href='Avance Player/Biblioteca.php'>Biblioteca</a> <br> <br>
         </div>
     </div>
 </header>
@@ -267,15 +258,7 @@ if ($_SESSION["token"] == "SI") {
     <div class='Buttons2'>
         <button class='my-btn2' onclick=\"location.href='Descargar.php'\">Descargas</button>
         <!-- Botón 2 desplegable -->
-        <div class='dropdown-container2'>
-            <button class='my-btn2'>Género</button>
-            <div class='dropdown-content2'>
-                <a href='rock.html'>Rock</a> <br>
-                <a href='Indie.html'>Indie</a> <br>
-                <a href='pop.html'>Undergorund</a> <br>
-                <a href='pop.html'>Latino</a> <br>
-            </div>
-        </div>
+        <button class='my-btn2' onclick=\"location.href='Acerca.php'\">Acerca de nosotros</button>
     </div>
 </nav>
 <!-- Contenido -->

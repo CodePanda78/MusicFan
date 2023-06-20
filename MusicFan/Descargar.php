@@ -17,28 +17,32 @@
             text-align: center;
             margin: 10px;
         }
+        .alert {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 <header>
     Descargas
 </header>
 <nav>
-        <!-- Botón 2 desplegable -->
-        <div class='dropdown-container2'>
-            <button class='my-btn2'>Género</button>
-            <div class='dropdown-content2'>
-                <a href='rock.html'>Rock</a> <br>
-                <a href='Indie.html'>Indie</a> <br>
-                <a href='pop.html'>Undergorund</a> <br>
-                <a href='pop.html'>Latino</a> <br>
-            </div>
-        </div>
-    </div>
+<div class='Buttons2'>
+        <button class='my-btn2' onclick="location.href='Menú principal.php'">Volver</button>
+</div>
 </nav>
 <body>
   <center>
 
     <?php
+    session_start();
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -77,6 +81,16 @@
     }
     $conn->close();
     ?>
+
+    <?php if (isset($_SESSION["alerta"])): ?>
+        <script>
+            alert("<?php echo $_SESSION["alerta"]; ?>");
+        </script>
+        <?php
+        unset($_SESSION["alerta"]);
+    endif;
+    ?>
   </center>
+
 </body>
 </html>

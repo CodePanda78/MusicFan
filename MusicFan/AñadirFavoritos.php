@@ -1,5 +1,7 @@
+<html>
 <?php
 session_start();
+
 
 if (!isset($_SESSION["token"])) {
     $_SESSION["token"] = "NO";
@@ -35,17 +37,16 @@ if ($_SESSION["token"] == "SI") {
     $checkResult = $conn->query($checkSQL);
 
     if ($checkResult->num_rows > 0) {
-        echo "<script> alert('La canción ya está añadida a favoritos')</script>";
-        header("Location: Descargar.php");
+        $_SESSION["alerta"] = "La canción ya está añadida a favoritos";
         
     } else {
         // Insertar canción a favoritos
         $insertSQL = "INSERT INTO $tableName (ID, Autor, Cancion, Link) VALUES ('$ID', '$autor', '$cancion', '$link')";
 
         if ($conn->query($insertSQL) === TRUE) {
-            header("Location: Descargar.php");
+            
         } else {
-            echo "Error al agregar la canción a favoritos: " . $conn->error;
+            $_SESSION["alerta"] = "Error al agregar la canción a favoritos: " . $conn->error;
         }
     }
 
@@ -54,4 +55,6 @@ if ($_SESSION["token"] == "SI") {
     echo "Debes iniciar sesión para agregar a favoritos";
 }
 
+header("Location: Descargar.php");
 ?>
+</html>

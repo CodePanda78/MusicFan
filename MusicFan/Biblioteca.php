@@ -16,6 +16,11 @@
 </head>
 <header>
    Biblioteca
+   <nav>
+   <div class='Buttons2'>
+        <button class='my-btn2' onclick="location.href='Menú principal.php'">Volver</button>
+</div>
+    </nav>
 </header>
 <?php
 session_start();

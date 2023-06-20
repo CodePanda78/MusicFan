@@ -28,10 +28,14 @@ if ($result->num_rows > 0) {
     $_SESSION["token"] = "SI";
     $_SESSION["usuario"] = "$row[Usuario]";
     $_SESSION["email"] = "$row[Email]";
+    $_SESSION["profile_image"];
     header("Location: Menú principal.php");
     exit;
     }else{
-        echo "Contraseña incorrecta";
+        echo "<script> 
+        alert('¡Contraseña incorrecta!');
+        window.location.href = 'IniciarSesion.html';
+      </script>";
     }
 } else if ($user==""|| $contra == "") {
     header("Location: Menú principal.php");

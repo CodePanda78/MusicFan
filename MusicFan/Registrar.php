@@ -22,27 +22,29 @@ $checkUserSql = "SELECT * FROM usuariosmf WHERE Usuario = '$user' OR Email = '$e
 $checkUserResult = $conn->query($checkUserSql);
 
 if ($checkUserResult->num_rows > 0) {
-    echo "<script> alert ('¡Advertencia: El usuario o correo electrónico ya existe!') </script>";
-exit;
+    echo "<script> 
+            alert('¡Advertencia: El usuario o correo electrónico ya existe!');
+            window.location.href = 'IniciarSesion.html';
+          </script>";
 } else {
     // Insertar nuevo usuario
     $sql = "INSERT INTO usuariosmf (Usuario, Contraseña, Email) VALUES ('$user', '$contra', '$email')";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: IniciarSesion.html");
-        echo "<form action='IniciarSesion.html' method='post'>
-        <input type='submit' value='Volver'>";
-
         $tableName = "tabla_" . $user;
         $createTableSQL = "CREATE TABLE $tableName (
-            ID CHAR(2),
-            Autor VARCHAR(24),
-            Cancion VARCHAR(24),
-            Link VARCHAR(100)
+            ID INT(11) AUTO_INCREMENT PRIMARY KEY,
+            Autor VARCHAR(50),
+            Cancion VARCHAR(50),
+            Link VARCHAR(255),
+            profile_image VARCHAR(255)
         )";
 
         if ($conn->query($createTableSQL) === TRUE) {
-            echo "Tabla creada: $user";
+            echo "<script> 
+                    alert('¡El usuario se ha registrado exitosamente!');
+                    window.location.href = 'IniciarSesion.html';
+                  </script>";
         } else {
             echo "Error al crear la tabla: " . $conn->error;
         }
@@ -53,8 +55,11 @@ exit;
 
 $conn->close();
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <body>
 </body>
 </html>
+

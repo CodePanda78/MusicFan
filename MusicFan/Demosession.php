@@ -26,6 +26,10 @@ if ($_SESSION["token"] == "SI") {
         <button class='my-btn3' onclick=\"location.href='CerrarSession.php'\">Cerrar Sesión</button>
         </div>
     </nav>
+    <content>
+    <br>
+Hola
+    </content>
     </html>";
 } else {
     echo "No hay sesión activa, favor de iniciar sesión en el sistema";
