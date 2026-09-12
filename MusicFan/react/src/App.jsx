@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, NavLink, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import { Download, Heart, Info, Library, LogIn, LogOut, Menu, Pause, Play, SkipBack, SkipForward, User, UserPlus, X } from 'lucide-react';
+import { Download, Heart, Info, Library as LibraryIcon, LogIn, LogOut, Menu, Pause, Play, SkipBack, SkipForward, User, UserPlus, X } from 'lucide-react';
 
 const API = `${window.location.protocol}//${window.location.hostname}/MusicFan`;
 const asset = (path) => `${API}/${path.replaceAll('\\', '/')}`;
@@ -130,7 +130,7 @@ function Library() {
   const load = () => fetch(`${API}/api/biblioteca.php`, { credentials: 'include' }).then(r => r.json()).then(d => { if (!d.authenticated) { setError('Debes iniciar sesión para acceder a tu biblioteca.'); return; } setSongs(d.songs || []); }).catch(() => setError('No se pudo cargar la biblioteca.')).finally(() => setLoading(false));
   useEffect(load, []);
   async function remove(id) { await fetch(`${API}/api/biblioteca.php`, { method: 'DELETE', credentials: 'include', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ id }) }); load(); }
-  return <section className="page"><div className="page-title"><div><p className="eyebrow">TU COLECCIÓN</p><h1>Biblioteca</h1><p>Tus canciones favoritas en un solo lugar.</p></div><Library size={40}/></div>{loading ? <div className="empty">Cargando...</div> : error ? <div className="empty">{error}<Link to="/login" className="button primary">Iniciar sesión</Link></div> : songs.length === 0 ? <div className="empty">Tu biblioteca está vacía. <Link to="/descargas">Explorar canciones</Link></div> : <div className="library-list">{songs.map(s => <div className="library-row" key={s.id}><div><strong>{s.title}</strong><span>{s.artist}</span></div><div className="row-actions"><a href={asset(s.link)} download><Download size={17}/></a><button onClick={() => remove(s.id)}>Eliminar</button></div></div>)}</div>}</section>;
+  return <section className="page"><div className="page-title"><div><p className="eyebrow">TU COLECCIÓN</p><h1>Biblioteca</h1><p>Tus canciones favoritas en un solo lugar.</p></div><LibraryIcon size={40}/></div>{loading ? <div className="empty">Cargando...</div> : error ? <div className="empty">{error}<Link to="/login" className="button primary">Iniciar sesión</Link></div> : songs.length === 0 ? <div className="empty">Tu biblioteca está vacía. <Link to="/descargas">Explorar canciones</Link></div> : <div className="library-list">{songs.map(s => <div className="library-row" key={s.id}><div><strong>{s.title}</strong><span>{s.artist}</span></div><div className="row-actions"><a href={asset(s.link)} download><Download size={17}/></a><button onClick={() => remove(s.id)}>Eliminar</button></div></div>)}</div>}</section>;
 }
 
 function Profile() {
